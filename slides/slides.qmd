@@ -7,32 +7,49 @@ format:
     embed-resources: true
 ---
 
-## Quarto
+## About me
 
-Quarto enables you to weave together content and executable code into a finished presentation.
-To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+# Customising Quarto outputs {background-color="#2F4F4F"}
 
-## Bullets
+## What is Quarto?
 
-When you click the **Render** button a document will be generated that includes:
+## Customising HTML outputs
 
--   Content authored with markdown
--   Output from executable code
+## Customising PDF outputs
 
-## Code
+# Building your own Quarto extension {background-color="#2F4F4F"}
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+## What are Quarto extensions?
 
-```{r}
-#| echo: true
-1 + 1
-```
+## How do you use Quarto extensions?
 
-You can also add `text marked as code`! 
+# Building your own Quarto extension {background-color="#2F4F4F"}
 
-# New topic! {background-color="#2F4F4F"}
+## What are the different files you need?
 
-To make a slide like this, use:
+## Template files
 
-    # Section title {background-color="#2F4F4F"}
+## Sharing with GitHub
 
+## Other options for sharing
+
+## 
+
+::: columns
+::: {.column}
+
+<br>
+
+{{< fa brands twitter >}} [@nrennie35](https://twitter.com/nrennie35)
+
+{{< fa brands github >}} [nrennie](https://github.com/nrennie)
+
+{{< fa globe >}} [nrennie.rbind.io](https://nrennie.rbind.io/)
+
+{{< fa briefcase >}} [chicas.lancaster-university.uk](https://chicas.lancaster-university.uk/)
+
+:::
+::: {.column}
+
+add QR code
+![](){fig-align="center" fig-alt="QR code" width=70%}
