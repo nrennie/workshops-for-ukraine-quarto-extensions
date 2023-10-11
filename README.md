@@ -1,4 +1,4 @@
-# Building Quarto extensions for customised outputs
+# Customising slides and documents using Quarto extensions
 
 **Speaker**: Nicola Rennie is a Lecturer in Health Data Science based within the Centre for Health Informatics, Computing, and Statistics at Lancaster Medical School. Her research interests include applications of statistics and machine learning to healthcare and medicine, communicating data through visualisation, and understanding how we teach statistical concepts. Nicola also has experience in data science consultancy, and collaborates closely with external research partners. She can often be found at data science meetups, presenting at conferences, and is the R-Ladies Lancaster chapter organiser.
 
