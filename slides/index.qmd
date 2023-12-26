@@ -1,0 +1,648 @@
+---
+title: "Customizing slides and documents using Quarto extensions "
+subtitle: "Workshops for Ukraine<small>11 January 2024</small>"
+author: "Dr Nicola Rennie"
+format:
+  LUstyle-revealjs:
+    self-contained: true
+    footer: "{{< fa envelope >}} [n.rennie@lancaster.ac.uk](mailto:n.rennie@lancaster.ac.uk) {{< fa globe >}} [nrennie.rbind.io](https://nrennie.rbind.io/) {{< fa brands linkedin >}} [nicola-rennie](https://www.linkedin.com/in/nicola-rennie/)"
+---
+
+# Welcome!
+
+## About me
+
+::: columns
+::: {.column .right}
+
+Lecturer in Health Data Science at [Lancaster Medical School](https://chicas.lancaster-university.uk/).
+
+<br>
+
+Academic background in statistics, with experience in data science consultancy.
+
+<br>
+
+Blog about R and data science at [nrennie.rbind.io/blog](https://nrennie.rbind.io/blog/).
+
+:::
+
+::: {.column}
+
+![](images/CHICASlogo.png){fig-align="center" fig-alt="CHICAS logo" width=100%}
+
+:::
+:::
+
+## What to expect during this workshop
+
+The workshop will run for *2 hours*.
+
+* Combines slides, live coding examples, quiz questions, and exercises for you to participate in.
+
+* Ask questions throughout!
+
+## Workshop resources
+
+* GitHub: [github.com/nrennie/workshops-for-ukraine-quarto-extensions](https://github.com/nrennie/workshops-for-ukraine-quarto-extensions)
+
+* Slides: [nrennie.github.io/workshops-for-ukraine-quarto-extensions](https://nrennie.github.io/workshops-for-ukraine-quarto-extensions)
+
+# Customising Quarto outputs {background-color="#D9DBDB"}
+
+## What is Quarto?
+
+Quarto is an open-source scientific and technical publishing system that allows you to combine text, images, code, plots, and tables in a fully-reproducible document. Quarto has support for multiple languages including R, Python, Julia, and Observable. It also works for a range of output formats such as PDFs, HTML documents, websites, presentations, ...
+
+## What is Quarto?
+
+::: columns
+
+::: {.column width="50%"}
+
+```yaml
+---
+title: "My document"
+format: html
+---
+
+Content goes here.
+```
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/demo1.png){fig-align="center" fig-alt="Quarto document screenshot" width=100%}
+
+:::
+
+:::
+
+## Why customise document style?
+
+#### Consistency
+
+Documents from different authors look the same.
+
+___
+
+#### Professionalism
+
+Default options usually look like the default options.
+
+___
+
+#### Accessibility
+
+Information can often be presented in better ways when designed actively.
+
+
+## Built-in themes for HTML output
+
+Quarto includes 25 themes from the [Bootswatch](https://bootswatch.com/) project for HTML output.
+
+<br> 
+
+See [quarto.org/docs/output-formats/html-themes.html](https://quarto.org/docs/output-formats/html-themes.html) for a complete list.
+
+<br>
+
+> There are also 11 built-in themes for Revealjs presentations.
+
+
+## Built-in themes for HTML output
+
+::: columns
+
+::: {.column width="50%"}
+
+```yaml
+---
+title: "My document"
+format:
+  html:
+    theme: slate
+---
+
+Content goes here.
+```
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/demo2.png){fig-align="center" fig-alt="Quarto document screenshot" width=100%}
+
+:::
+
+:::
+
+## Built-in options for HTML output
+
+::: columns
+
+::: {.column width="50%"}
+
+```yaml
+---
+title: "My document"
+format:
+  html:
+    backgroundcolor: lightblue
+---
+
+Content goes [here](https://github.com/).
+```
+
+<br>
+
+See [quarto.org/docs/reference/formats/html](https://quarto.org/docs/reference/formats/html.html) for all HTML options.
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/demo3.png){fig-align="center" fig-alt="Quarto document screenshot" width=100%}
+
+:::
+
+:::
+
+## Exercise 1
+
+
+## Adding your own CSS styling
+
+::: columns
+
+::: {.column width="50%"}
+
+```yaml
+---
+title: "My document"
+format:
+  html:
+    theme: [morph, styles.scss]
+---
+
+Content goes [here](https://github.com/).
+```
+
+`styles.scss`
+
+````css
+/*-- scss:defaults --*/
+$link-color: #800080;
+
+/*-- scss:rules --*/
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: -3px -3px 0 rgba(0, 0, 0, .3);
+}
+````
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/demo4.png){fig-align="center" fig-alt="Quarto document screenshot" width=100%}
+
+:::
+
+:::
+
+
+## Built-in options for PDF output
+
+::: columns
+
+::: {.column width="50%"}
+
+```yaml
+---
+title: "My document"
+format:
+  pdf:
+    urlcolor: "red"
+---
+
+Content goes [here](https://github.com/).
+```
+
+<br>
+
+See [quarto.org/docs/reference/formats/pdf](https://quarto.org/docs/reference/formats/pdf.html) for all PDF options.
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/demo5.png){fig-align="center" fig-alt="Quarto document screenshot" width=100%}
+
+:::
+
+:::
+
+
+## Adding your own LaTeX styling
+
+::: columns
+
+::: {.column width="50%"}
+
+`document.qmd`
+
+```yaml
+---
+title: "My document"
+format:
+  pdf:
+    include-in-header: 
+       - "styles.tex"
+---
+
+# Section 1
+
+Content goes [here](https://github.com/).
+```
+
+:::
+
+::: {.column width="50%"}
+
+`styles.tex`
+
+```latex
+%% load packages
+\usepackage{xcolor}
+\usepackage{sectsty}
+
+%% Let's define some colours
+\definecolor{MyPurple}{HTML}{800080}
+
+%% Section font colour
+\sectionfont{\color{MyPurple}}
+```
+
+:::
+
+:::
+
+## Adding your own LaTeX styling
+
+![](images/demo6.png){fig-align="center" fig-alt="Quarto document screenshot" width=100%}
+
+> In the upcoming Quarto 1.4 release, you can also create PDFs using Typst (no LaTeX!).
+
+## Exercise 2
+
+
+
+## Using Quarto extensions
+
+Extensions are a powerful way to modify and extend the behavior of Quarto. Extensions can be used to add styling to your documents.
+
+<br>
+
+::: {.fragment}
+
+Extensions aren't just used to change document styling.
+
+There are also extensions to:
+
+* Embed shinylive applications in a Quarto document
+* Embed HTML forms in documents
+* Use Font Awesome icons in HTML and PDF outputs
+* ...
+
+:::
+
+## Installing Quarto extensions
+
+There are different ways to distribute Quarto extensions. Many are distributed via GitHub.
+
+<br>
+
+To install an extension, run the following in the command line:
+
+```bash
+quarto install extension username/repository
+```
+
+<br>
+
+For example, to install my `PrettyPDF` extension: 
+
+```bash
+quarto install extension nrennie/PrettyPDF
+```
+
+## Using Quarto extensions
+
+This creates an `_extensions` folder in your current directory.
+
+You then need to edit the YAML at the top of the Quarto document, to tell it to use the extension:
+
+```yaml
+---
+format: PrettyPDF-pdf
+---
+```
+
+::: {.fragment}
+
+Options works as normal:
+
+```yaml
+---
+format:
+  PrettyPDF-pdf:
+    keep-tex: true
+---
+```
+:::
+
+## Using Quarto extensions
+
+Need to reformat to a completely different style?
+
+```yaml
+---
+format: PrettyPDF-pdf
+---
+```
+
+<br>
+
+::: {.fragment}
+
+Just change the YAML!
+
+```yaml
+---
+format: PrettierPDF-pdf
+---
+```
+
+:::
+
+## Installing Quarto templates
+
+Some Quarto extensions (especially style extensions) come with a template file that changes the YAML for you.
+
+
+```bash
+quarto use template username/repository
+```
+<br>
+
+For example, to use my `PrettyPDF` template: 
+
+```bash
+quarto use template nrennie/PrettyPDF
+```
+<br>
+
+This creates an `_extensions` folder in your current directory **and** a `.qmd` file with the correct YAML.
+
+## Where do I find Quarto extensions?
+
+::: columns
+
+::: {.column width="50%"}
+
+A few suggestions...
+
+<br>
+
+[quarto.org/docs/extensions](https://quarto.org/docs/extensions/)
+
+<br>
+
+[github.com/quarto-journals](https://github.com/quarto-journals/)
+
+<br>
+
+[github.com/mcanouil/awesome-quarto](https://github.com/mcanouil/awesome-quarto)
+
+:::
+
+::: {.column width="50%"}
+
+![](images/quarto.png){fig-align="center" fig-alt="Quarto logo" width=70%}
+
+:::
+
+:::
+
+## Exercise 3
+
+# Building your own Quarto extension {background-color="#D9DBDB"}
+
+## Why build your own extension?
+
+#### Reduce repetition
+
+Don't copy and paste commonly used YAML options between documents.
+
+___
+
+#### Share with others
+
+Everybody in an organisation can create similar outputs without having to adjust the style themselves.
+
+___
+
+#### Version control style
+
+Changes to designs can be tracked alongside code.
+
+## What are the components of a (style) extension?
+
+The essentials...
+
+* _extensions folder
+
+* _extension.yml file
+
+::: {.fragment}
+
+The *nice to haves*...
+
+* template.qmd file
+
+* Other files e.g. logos or fonts
+
+:::
+
+## What are the components of a (style) extension?
+
+The folder structure might look like this:
+
+```md
+├── template.qmd
+└── _extensions/
+    └── Extension Name/
+        ├── _extension.yml
+        └── Other files...
+```
+
+## What are the components of a (style) extension?
+
+![](images/PrettyPDF1.png){fig-align="center" fig-alt="Screenshot of GitHub repository file structure for PrettyPDF extension" width=100%}
+
+## The `template.qmd` file
+
+````md
+---
+title: "Pretty PDFs with Quarto"
+format: PrettyPDF-pdf
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished 
+document. To learn more about Quarto see <https://quarto.org>.
+
+### Running Code
+
+When you click the **Render** button a document will be generated that includes both 
+content and the output of embedded code. You can embed code like this:
+
+```{{r}}
+1 + 1
+```
+
+````
+
+## The `_extension.yml` file
+
+```yaml
+title: PrettyPDF
+author: Nicola Rennie
+version: 0.0.1
+contributes:
+  formats: 
+    pdf:
+      include-in-header: 
+       - "PrettyPDF.tex"
+      include-before-body:
+       - "pagestyle.tex"
+      toc: false
+      code-block-bg: light
+      linkcolor: highlight
+      urlcolor: highlight
+```
+
+## The `PrettyPDF.tex` file
+
+```latex
+% load packages
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\usepackage{fontspec}
+\usepackage{titlesec}
+
+%% Set page size with a wider right margin
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm, bottom=20mm, right=50mm}
+```
+
+## The `PrettyPDF.tex` file
+
+```latex
+%% Let's define some colours
+\definecolor{light}{HTML}{E6E6FA}
+\definecolor{highlight}{HTML}{800080}
+\definecolor{dark}{HTML}{330033}
+
+%% style the chapter/section fonts
+\chapterfont{\color{dark}\fontsize{20}{16.8}\selectfont}
+\sectionfont{\color{dark}\fontsize{20}{16.8}\selectfont}
+\subsectionfont{\color{dark}\fontsize{14}{16.8}\selectfont}
+\titleformat{\subsection}
+  {\sffamily\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+```
+
+## The `PrettyPDF.tex` file
+
+```latex
+%% Let's add the border on the right hand side 
+\AddToShipoutPicture{% 
+    \AtPageLowerLeft{% 
+        \put(\LenToUnit{\dimexpr\paperwidth-3cm},0){% 
+            \color{light}\rule{3cm}{\LenToUnit\paperheight}%
+          }%
+     }%
+     % logo
+    \AtPageLowerLeft{% start the bar at the bottom right of the page
+        \put(\LenToUnit{\dimexpr\paperwidth-2.25cm},27.2cm){% move it to the top right
+            \color{light}\includegraphics[width=1.5cm]{_extensions/nrennie/PrettyPDF/logo.png}
+          }%
+     }%
+}
+```
+
+## Exercise 4
+
+
+## Sharing extensions with others
+
+## Tips for building extensions
+
+*Things I learnt the hard way...*
+
+* Things get confusing when you build an extension with same name as your GitHub username 
+
+* (Font) paths are hard
+
+* You'll likely want multiple output formats in one extension (e.g. book and pdf)
+
+## Useful links
+
+Slides: [nrennie.rbind.io/talks/bplim-quarto-extensions](https://nrennie.rbind.io/talks/bplim-quarto-extensions/)
+
+<br>
+
+Blog: [nrennie.rbind.io/blog/making-pretty-pdf-quarto](https://nrennie.rbind.io/blog/making-pretty-pdf-quarto/)
+
+<br>
+
+PrettyPDF extension: [github.com/nrennie/PrettyPDF](https://github.com/nrennie/PrettyPDF)
+
+<br>
+
+Building extensions guide: [quarto.org/docs/extensions/creating](https://quarto.org/docs/extensions/creating.html)
+
+
+## 
+
+::: columns
+::: {.column}
+
+<br>
+
+{{< fa brands linkedin >}} [nicola-rennie](https://www.linkedin.com/in/nicola-rennie/)
+
+{{< fa brands mastodon >}} [\@fosstodon.org/\@nrennie](https://fosstodon.org/deck/@nrennie)
+
+{{< fa brands github >}} [nrennie](https://github.com/nrennie)
+
+{{< fa globe >}} [nrennie.rbind.io](https://nrennie.rbind.io/)
+
+{{< fa briefcase >}} [chicas.lancaster-university.uk](https://chicas.lancaster-university.uk/)
+
+:::
+::: {.column}
+
+![](images/qr-code.png){fig-align="center" fig-alt="QR code" width=70%}
+
+:::
+:::
