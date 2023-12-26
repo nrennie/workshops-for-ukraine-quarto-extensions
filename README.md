@@ -7,3 +7,16 @@
 ## Workshops for Ukraine 
 
 Workshops for Ukraine is a series of R and Python workshops, the proceeds of which are donated to various organisations providing support to Ukraine. Details of past and future workshops can be found on their [website](https://sites.google.com/view/dariia-mykhailyshyna/main/r-workshops-for-ukraine).
+
+
+### Resources
+
+* GitHub: [github.com/nrennie/workshops-for-ukraine-quarto-extensions](https://github.com/nrennie/workshops-for-ukraine-quarto-extensions)
+
+* Slides: [nrennie.github.io/workshops-for-ukraine-quarto-extensions](https://nrennie.github.io/workshops-for-ukraine-quarto-extensions)
+
+* PrettyPDF extension: [github.com/nrennie/PrettyPDF](https://github.com/nrennie/PrettyPDF)
+
+* Building extensions guide: [quarto.org/docs/extensions/creating](https://quarto.org/docs/extensions/creating.html)
+
+* Awesome Quarto list: [github.com/mcanouil/awesome-quarto](https://github.com/mcanouil/awesome-quarto)
