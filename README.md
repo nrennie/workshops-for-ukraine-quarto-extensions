@@ -8,7 +8,6 @@
 
 Workshops for Ukraine is a series of R and Python workshops, the proceeds of which are donated to various organisations providing support to Ukraine. Details of past and future workshops can be found on their [website](https://sites.google.com/view/dariia-mykhailyshyna/main/r-workshops-for-ukraine).
 
-
 ### Resources
 
 * GitHub: [github.com/nrennie/workshops-for-ukraine-quarto-extensions](https://github.com/nrennie/workshops-for-ukraine-quarto-extensions)
@@ -20,3 +19,19 @@ Workshops for Ukraine is a series of R and Python workshops, the proceeds of whi
 * Building extensions guide: [quarto.org/docs/extensions/creating](https://quarto.org/docs/extensions/creating.html)
 
 * Awesome Quarto list: [github.com/mcanouil/awesome-quarto](https://github.com/mcanouil/awesome-quarto)
+
+### Requirements
+
+Before attending this workshop, attendees should have at least version 1.2 of Quarto installed, and be able to create a basic Quarto document. A working installation of either R or Python is also recommended. Access to the command line is required for Exercise 3 - no previous experience of the command line is necessary as all code will be provided, but a working terminal is required.
+
+### Timings
+
+* Slides and demo 1:
+* Exercise 1:
+* Slides and demo 2:
+* Exercise 2:
+* Slides and demo 3:
+* Exercise 3:
+* Slides and demo 4:
+* Exercise 4:
+* Slides and closing:
