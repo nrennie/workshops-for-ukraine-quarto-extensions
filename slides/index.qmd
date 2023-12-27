@@ -213,6 +213,8 @@ Open `exercises/Exercise 1/README.md` for prompts.
 
 See `exercise_solutions/Exercise 1` for full solution.
 
+# Using style files {background-color="#D9DBDB"}
+
 ## Adding your own CSS styling
 
 ::: columns
@@ -252,7 +254,6 @@ h1, h2, h3, h4, h5, h6 {
 :::
 
 :::
-
 
 ## Built-in options for PDF output
 
@@ -333,9 +334,9 @@ Content goes [here](https://github.com/).
 
 ## Adding your own LaTeX styling
 
-![](images/demo6.png){fig-align="center" fig-alt="Quarto document screenshot" width=100%}
+![](images/demo6.png){fig-align="center" fig-alt="Quarto document screenshot" width=90%}
 
-> In the upcoming Quarto 1.4 release, you can also create PDFs using Typst (no LaTeX!).
+> <small>In the upcoming Quarto 1.4 release, you can also create PDFs using Typst (no LaTeX!).</small>
 
 ## Live demo!
 
@@ -360,6 +361,8 @@ Open `exercises/Exercise 2/README.md` for prompts.
 . . . 
 
 See `exercise_solutions/Exercise 2` for full solution.
+
+# Styling with Quarto extension {background-color="#D9DBDB"}
 
 ## Using Quarto extensions
 
@@ -578,7 +581,21 @@ The folder structure might look like this:
 
 ## What are the components of a (style) extension?
 
+::: columns
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="80%"}
+
 ![](images/PrettyPDF1.png){fig-align="center" fig-alt="Screenshot of GitHub repository file structure for PrettyPDF extension" width=100%}
+
+:::
+
+::: {.column width="10%"}
+:::
+
+:::
 
 ## The `template.qmd` file
 
@@ -719,9 +736,9 @@ See `examples/Example 4/example4.qmd` for full code.
 
 Open `exercises/Exercise 4/README.md` for prompts.
 
-* Create an `_extensions` folder in the same directory as your `.qmd` file. (You may already have one from Exercise 3).
+* Create an `_extensions` folder in the same directory as your `.qmd` file.
 
-* Create another folder inside the `_extensions` folder with a name that will be the name of your extension e.g. `PrettyHTML`.
+* Create another folder inside the `_extensions` for your extension e.g. `PrettyHTML`.
 
 * Move your `styles.scss` file from Exercise 2 into the `PrettyHTML` folder.
 
@@ -753,6 +770,7 @@ quarto add https://gitlab.com/cooltools/shorty/-/archive/main/shorty-main.zip
 
 See [quarto.org/docs/extensions/distributing.html](https://quarto.org/docs/extensions/distributing.html).
 
+<br>
 
 Alternatively, as an R (or Python/Julia) package: [github.com/jthomasmock/octavo](https://github.com/jthomasmock/octavo)
 
