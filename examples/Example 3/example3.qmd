@@ -1,5 +1,5 @@
 ---
-title: "Exercise 3"
+title: "Example 3"
 format: PrettyPDF-pdf
 ---
 
