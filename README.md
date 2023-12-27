@@ -26,12 +26,13 @@ Before attending this workshop, attendees should have at least version 1.2 of Qu
 
 ### Timings
 
-* Slides and demo 1:
-* Exercise 1:
-* Slides and demo 2:
-* Exercise 2:
-* Slides and demo 3:
-* Exercise 3:
-* Slides and demo 4:
-* Exercise 4:
-* Slides and closing:
+* Welcome:            18:00 - 18:05
+* Slides and demo 1:  18:05 - 18:20
+* Exercise 1:         18:20 - 18:30
+* Slides and demo 2:  18:30 - 18:45
+* Exercise 2:         18:45 - 18:55
+* Slides and demo 3:  18:55 - 19:10
+* Exercise 3:         19:10 - 19:15
+* Slides and demo 4:  19:15 - 19:35
+* Exercise 4:         19:35 - 19:45
+* Slides and closing: 19:45 - 20:00
