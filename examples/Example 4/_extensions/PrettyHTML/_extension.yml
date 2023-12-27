@@ -1,0 +1,8 @@
+title: PrettyHTML
+author: Nicola Rennie
+version: 0.0.1
+contributes:
+  formats: 
+    html:
+      theme: [default, styles.scss]
+      
