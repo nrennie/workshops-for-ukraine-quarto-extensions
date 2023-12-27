@@ -1,0 +1,14 @@
+/*-- scss:defaults --*/
+
+// Body
+$body-color: #000080;
+
+// Code blocks
+$code-block-border-left: #FE019A;
+
+/*-- scss:rules --*/
+
+.title {
+  text-decoration: underline;
+  text-decoration-color: $code-block-border-left;
+}
