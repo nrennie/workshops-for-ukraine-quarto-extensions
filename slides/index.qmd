@@ -274,11 +274,11 @@ Content goes here.
 
 <br>
 
-See [quarto.org/docs/output-formats/ms-word-templates.html](https://quarto.org/docs/output-formats/ms-word-templates.html) for all PDF options.
+See [quarto.org/docs/output-formats/ms-word-templates.html](https://quarto.org/docs/output-formats/ms-word-templates.html) for all MS Word options.
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="40%"}
 
 
 ![](images/word-modify-styles.png){fig-align="center" fig-alt="Screenshot of Word documents style box" width=100%}
@@ -395,7 +395,7 @@ Open `exercises/Exercise 2/README.md` for prompts.
 
 See `exercise_solutions/Exercise 2` for full solution.
 
-# Styling with Quarto extension {background-color="#D9DBDB"}
+# Styling with Quarto extensions {background-color="#D9DBDB"}
 
 ## Using Quarto extensions
 
