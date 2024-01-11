@@ -255,6 +255,39 @@ h1, h2, h3, h4, h5, h6 {
 
 :::
 
+## Adding your own docx styling
+
+::: columns
+
+::: {.column width="50%"}
+
+```yaml
+---
+title: "My document"
+format:
+  docx:
+    reference-doc: styles.docx
+---
+
+Content goes here.
+```
+
+<br>
+
+See [quarto.org/docs/output-formats/ms-word-templates.html](https://quarto.org/docs/output-formats/ms-word-templates.html) for all PDF options.
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/word-modify-styles.png){fig-align="center" fig-alt="Screenshot of Word documents style box" width=100%}
+
+:::
+
+:::
+
+
 ## Built-in options for PDF output
 
 ::: columns
